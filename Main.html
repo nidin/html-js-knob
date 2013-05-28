@@ -10,6 +10,29 @@
 			var knob2 = new Knob("knob_2");
 			var knob3 = new Knob("knob_3");
 			var knob4 = new Knob("knob_4");
+			
+			knob1.onChange(function(value){
+				document.getElementById("knob_1_value").innerHTML = "Knob #1 = "+value;
+			});
+			knob2.onChange(function(value){
+				document.getElementById("knob_2_value").innerHTML = "Knob #2 = "+value;
+			});
+			knob3.onChange(function(value){
+				document.getElementById("knob_3_value").innerHTML = "Knob #3 = "+value;
+			});
+			knob4.onChange(function(value){
+				document.getElementById("knob_4_value").innerHTML = "Knob #4 = "+value;
+			});
+			
+			knob1.value(0.25);
+			knob2.value(0.5);
+			knob3.value(0.75);
+			knob4.value(0.15);
+			
+			document.getElementById("knob_1_value").innerHTML = "Knob #1 = "+knob1.value();
+			document.getElementById("knob_2_value").innerHTML = "Knob #2 = "+knob2.value();
+			document.getElementById("knob_3_value").innerHTML = "Knob #3 = "+knob3.value();
+			document.getElementById("knob_4_value").innerHTML = "Knob #4 = "+knob4.value();
 		}
 	</script>
     <link type="text/css" href="Knob.css" rel="stylesheet">
@@ -17,10 +40,16 @@
 <body onLoad="init()">
 	<div class="container">
 		<div class="knob_holder">
-			<div style="float:left;" id="knob_1"></div>
-			<div style="float:left;" id="knob_2"></div>
-			<div style="float:left;" id="knob_3"></div>
-			<div style="float:left;" id="knob_4"></div>
+			<div class="knob" id="knob_1"></div>
+			<div class="knob" id="knob_2"></div>
+			<div class="knob" id="knob_3"></div>
+			<div class="knob" id="knob_4"></div>
+		</div>
+		<div style="float:left;">
+			<div class="knob_value"  id="knob_1_value">Knob #1 =</div>
+			<div class="knob_value"  id="knob_2_value">Knob #2 =</div>
+			<div class="knob_value"  id="knob_3_value">Knob #3 =</div>
+			<div class="knob_value"  id="knob_4_value">Knob #4 =</div>
 		</div>
 	</div>
 </body>
