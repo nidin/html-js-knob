@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title></title>
+   	<script type="text/javascript" src="Knob.js"></script>
+	<script type="text/javascript">
+		function init(){
+			var knob1 = new Knob("knob_1");
+			var knob2 = new Knob("knob_2");
+			var knob3 = new Knob("knob_3");
+			var knob4 = new Knob("knob_4");
+		}
+	</script>
+    <link type="text/css" href="Knob.css" rel="stylesheet">
+</head>
+<body onLoad="init()">
+	<div class="container">
+		<div class="knob_holder">
+			<div style="float:left;" id="knob_1"></div>
+			<div style="float:left;" id="knob_2"></div>
+			<div style="float:left;" id="knob_3"></div>
+			<div style="float:left;" id="knob_4"></div>
+		</div>
+	</div>
+</body>
+</html>
