@@ -50,6 +50,9 @@ var Knob;
 		targetKnob.deg = targetKnob.deg > 235?235:(targetKnob.deg < -55? -55:targetKnob.deg);
 		targetKnob.style.MozTransform="rotate("+targetKnob.deg+"deg)";
 		targetKnob.style.webkitTransform="rotate("+targetKnob.deg+"deg)";
+		targetKnob.style.msTransform ="rotate("+targetKnob.deg+"deg)";
+		targetKnob.style.msTransform ="rotate("+targetKnob.deg+"deg)";
+		targetKnob.style.OTransform ="rotate("+targetKnob.deg+"deg)";
 		if (targetKnob.deg > 90) {
 			targetKnob.firstChild.nextSibling.style.top = "7px";
 		}else {
